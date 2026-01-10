@@ -1,0 +1,15 @@
+.cartImg{
+    height:350px;
+}
+
+.cartCont{
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.shopNowBtn {
+    width:100px;
+}

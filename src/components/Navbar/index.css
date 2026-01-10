@@ -1,0 +1,44 @@
+.logo {
+    height:50px;
+}
+
+ul {
+    list-style-type:none;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+}
+li {
+    color:#065f46;
+    padding:10px;
+}
+p{
+    font-size:17px;
+}
+
+.navContainer{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    width:80%;
+    margin:auto;
+    
+}
+nav {
+    border-bottom: 1px solid #fecaca;
+    
+
+}
+
+button {
+    width:80px;
+    background-color:#ef4444;
+}
+
+.logo {
+    height:75px;
+   
+}
+
