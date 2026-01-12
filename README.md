@@ -1,16 +1,50 @@
-# React + Vite
+## Ajanta Exotica Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern React storefront for Ajanta Exotica with authentication, product listing, filtering, and a cart/checkout experience, built on top of Vite.
 
-Currently, two official plugins are available:
+### Tech stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend**: React 19 + Vite
+- **Routing**: React Router DOM 7
+- **Auth & storage**: JWT via `js-cookie`, cart persisted in `localStorage`
+- **Styling**: Custom CSS (Poppins typography, responsive layouts)
 
-## React Compiler
+### Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Authentication**
+  - Login screen with username/password, JWT token stored as `jwt_token` cookie.
+  - Redirects to home when already authenticated.
 
-## Expanding the ESLint configuration
+- **Navigation**
+  - Top navbar with logo, links to **Home**, **Products**, **Cart**, and a styled **Logout** button.
+  - Logout clears the token and redirects to `/login`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Home**
+  - Hero section with brand messaging and a **Shop Now** button that routes to `/products`.
+
+- **Products**
+  - Fetches products from `https://apis.ccbp.in/products` using the JWT.
+  - Filters by rating and price range, and sorts by price/rating.
+  - Responsive product cards with image, brand, price, rating, and **Add to Cart** button.
+  - Cart badge in navbar updates live via a custom `cartUpdated` event.
+
+- **Cart & Checkout**
+  - Cart items persisted in `localStorage` with quantity controls and per-item totals.
+  - Empty-cart state with CTA back to products.
+  - **Checkout** button clears the cart and shows an **Order Placed** confirmation with a **Continue Shopping** button.
+
+### Routes
+
+- `/login` – Login page
+- `/` – Home
+- `/products` – Products listing and filters
+- `/cart` – Cart and checkout
+
+### Getting started
+
+```bash
+npm install
+npm run dev
+```
+
+Then open the printed `http://localhost:xxxx` URL in your browser.

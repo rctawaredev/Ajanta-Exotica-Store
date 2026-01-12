@@ -1,7 +1,9 @@
 import Navbar from '../Navbar'
 import './index.css'
+import {useNavigate} from 'react-router-dom'
 
 const Home=()=> {
+    const navigate = useNavigate()
     return(
         <div className="HomeContainer">
             <Navbar/>
@@ -17,7 +19,7 @@ const Home=()=> {
                             Trends may change, but your signature look is what truly sets you apart. 
                             Discover new collections each season and define your own style.
                         </p>
-                         <button className="shopNowBtn"> Shop Now</button>
+                         <button className="shopNowBtn" onClick={() => navigate('/products')}> Shop Now</button>
                     </div>
                     <div>
                         <img src="https://res.cloudinary.com/distnojxb/image/upload/v1768057769/image3_wfjldv.png" 
