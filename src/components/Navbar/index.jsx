@@ -32,11 +32,8 @@ const Navbar = () => {
       <div className="navContainer">
         <ul>
           <li>
-            <Link to="/">
-              <img
-                src="https://res.cloudinary.com/distnojxb/image/upload/v1768056076/ajx_logo-Photoroom_1_mpqxkd.png"
-                className="logo"
-              />
+            <Link className="nav-link" to="/">
+              <h1><span className="ajanta">Ajanta </span> <span className="exotica">Exotica</span></h1>
             </Link>
           </li>
         </ul>

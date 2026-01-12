@@ -96,20 +96,12 @@ button {
     font-weight:600;
     cursor:pointer;
     margin-top:6px;
-    box-shadow:0 12px 20px rgba(236, 72, 153, 0.35);
+    
     transition:transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
 }
 
-button:hover{
-    transform:translateY(-1px);
-    box-shadow:0 16px 26px rgba(236, 72, 153, 0.4);
-}
 
-button:active{
-    transform:translateY(0);
-    box-shadow:0 8px 14px rgba(236, 72, 153, 0.3);
-    opacity:0.9;
-}
+
 
 .error-message{
     color:#b91c1c;

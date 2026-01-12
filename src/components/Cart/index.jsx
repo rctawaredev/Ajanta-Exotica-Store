@@ -70,7 +70,7 @@ const Cart = () => {
             <h1>Order Placed Successfully</h1>
             <p>Your order has been placed. You will receive a confirmation shortly.</p>
             <button className="primary-btn" onClick={() => navigate('/products')}>
-              Continue Shopping
+              Shop More
             </button>
           </div>
         </div>
@@ -109,9 +109,9 @@ const Cart = () => {
               </div>
               <div className="cart-item-controls">
                 <div className="quantity-controls">
-                  <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
+                  <button className="cartBtn" onClick={() => updateQuantity(item.id, item.quantity - 1)}><i class="fa-solid fa-minus"></i></button>
                   <span className="quantity">{item.quantity}</span>
-                  <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
+                  <button className="cartBtn" onClick={() => updateQuantity(item.id, item.quantity + 1)}><i class="fa-solid fa-plus"></i></button>
                 </div>
                 <p className="item-total">₹{item.price * item.quantity}</p>
                 <button className="remove-btn" onClick={() => removeFromCart(item.id)}>

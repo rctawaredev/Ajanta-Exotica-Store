@@ -204,7 +204,7 @@ const Product = () => {
                   disabled={page === 1}
                   onClick={() => setPage(prev => Math.max(1, prev - 1))}
                 >
-                  Previous
+                  -
                 </button>
                 <span className="page-indicator">Page {page}</span>
                 <button
@@ -213,7 +213,7 @@ const Product = () => {
                   disabled={!hasMore}
                   onClick={() => setPage(prev => prev + 1)}
                 >
-                  Next
+                  +
                 </button>
               </div>
             </>
