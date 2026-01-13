@@ -2,27 +2,6 @@ import './index.css'
 import {Link} from 'react-router-dom'
 
 const AllProductsSection = ({productsData}) => {
-  const addToCart = (product) => {
-    // Get existing cart from localStorage
-    const existingCart = JSON.parse(localStorage.getItem('cart') || '[]')
-    
-    // Check if product already exists in cart
-    const existingItem = existingCart.find(item => item.id === product.id)
-    
-    if (existingItem) {
-      // If exists, increase quantity
-      existingItem.quantity += 1
-    } else {
-      // If new, add with quantity 1
-      existingCart.push({...product, quantity: 1})
-    }
-    
-    // Save back to localStorage
-    localStorage.setItem('cart', JSON.stringify(existingCart))
-    
-    // Trigger custom event to update cart count in Navbar
-    window.dispatchEvent(new Event('cartUpdated'))
-  }
 
   if (!productsData || !Array.isArray(productsData) || productsData.length === 0) {
     return null
@@ -54,10 +33,6 @@ const AllProductsSection = ({productsData}) => {
               />
             </div>
           </div>
-
-          <button className="add-to-cart-btn" onClick={() => addToCart(eachProduct)}>
-            Add to Cart
-          </button>
         </Link>
         </li>
       ))}

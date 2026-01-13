@@ -13,11 +13,11 @@
   justify-content: flex-start;
   width: 100%;
   max-width: 360px;
-  min-height: 550px;
+  min-height: 470px;
   padding: 16px;
   background:none;
   border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+ 
 }
 
 /* Image */

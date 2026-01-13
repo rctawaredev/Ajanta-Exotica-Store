@@ -55,7 +55,7 @@
 }
 .brand {
     font-size:17px;
-    color:#64748b;
+    color:#2563eb;
 }
 
 .brand-title{
@@ -65,7 +65,7 @@
 .ratingContt {
   display: flex;
   align-items: center;
-  background: #0f172a;
+  background: #3b82f6;
   color: #ffffff;
   padding: 4px 8px;
   border-radius: 6px;
