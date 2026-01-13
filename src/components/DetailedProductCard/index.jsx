@@ -34,6 +34,7 @@ const DetailedProductCard=()=> {
         imageUrl: fetchedData.image_url,
         price: fetchedData.price,
         rating: fetchedData.rating,
+        similarProducts:fetchedData.similar_products
         };
         setDetailedProductData(ProductData)
         setIsLoading(false)
@@ -117,6 +118,20 @@ const DetailedProductCard=()=> {
                 </button>
             </div>
           </div>
+        </div>
+        <div className="similar-products-container">
+          <h1>Similar products</h1>
+          <ul className="sp_container">
+            {detailedProductData.similarProducts.map(product=>(
+              <li className="sp_cont_list">
+                <img src={product.image_url}
+                className="sp_image"/>
+                <h6 className="sp_title"> {product.title} </h6>
+                <p className="sp_brand"> <span className="sp_by">by</span> {product.brand} </p>
+                <p className="sp_price">{`Rs ${product.price}/-`}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </>
     )}

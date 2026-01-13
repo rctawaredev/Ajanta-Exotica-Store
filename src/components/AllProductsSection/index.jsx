@@ -3,10 +3,6 @@ import {Link} from 'react-router-dom'
 
 const AllProductsSection = ({productsData}) => {
 
-  if (!productsData || !Array.isArray(productsData) || productsData.length === 0) {
-    return null
-  }
-
   return (
     <ul className="products-list">
       {productsData.map(eachProduct => (
