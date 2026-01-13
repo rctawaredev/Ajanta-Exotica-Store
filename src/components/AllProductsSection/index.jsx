@@ -1,4 +1,5 @@
 import './index.css'
+import {Link} from 'react-router-dom'
 
 const AllProductsSection = ({productsData}) => {
   const addToCart = (product) => {
@@ -31,6 +32,7 @@ const AllProductsSection = ({productsData}) => {
     <ul className="products-list">
       {productsData.map(eachProduct => (
         <li key={eachProduct.id} className="card">
+        <Link to={`/products/${eachProduct.id}`} className="Link-Item">
           <img
             src={eachProduct.imageUrl}
             alt={eachProduct.title}
@@ -56,6 +58,7 @@ const AllProductsSection = ({productsData}) => {
           <button className="add-to-cart-btn" onClick={() => addToCart(eachProduct)}>
             Add to Cart
           </button>
+        </Link>
         </li>
       ))}
     </ul>

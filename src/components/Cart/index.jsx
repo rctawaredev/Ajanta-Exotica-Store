@@ -68,7 +68,7 @@ const Cart = () => {
               className="order-placed-img"
             />
             <h1>Order Placed Successfully</h1>
-            <p>Your order has been placed. You will receive a confirmation shortly.</p>
+            <p>You will receive a confirmation shortly.</p>
             <button className="primary-btn" onClick={() => navigate('/products')}>
               Shop More
             </button>

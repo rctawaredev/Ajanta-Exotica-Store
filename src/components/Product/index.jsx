@@ -129,7 +129,6 @@ const Product = () => {
         <div className="loader-cont">
           <div className="loading-spinner">
             <div className="spinner"></div>
-            <p>Loading products...</p>
           </div>
         </div>
       ) : error ? (

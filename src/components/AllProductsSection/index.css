@@ -13,9 +13,9 @@
   justify-content: flex-start;
   width: 100%;
   max-width: 360px;
-  min-height: 530px;
+  min-height: 550px;
   padding: 16px;
-  background: #ffffff;
+  background:none;
   border-radius: 10px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
@@ -84,7 +84,7 @@
 .add-to-cart-btn {
     width: 100%;
     padding: 12px;
-    margin-top: auto;
+    margin-top: 50px;
     background-color: #ef4444;
     color: white;
     border: none;
@@ -101,4 +101,9 @@
 
 .add-to-cart-btn:active {
     transform: scale(0.98);
+}
+
+
+.Link-Item {
+  text-decoration:none;
 }

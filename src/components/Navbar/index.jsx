@@ -33,7 +33,7 @@ const Navbar = () => {
         <ul>
           <li>
             <Link className="nav-link" to="/">
-              <h1><span className="ajanta">Ajanta </span> <span className="exotica">Exotica</span></h1>
+              <h1><span className="ajanta">Ajanta</span> <span className="exotica">Exotica</span></h1>
             </Link>
           </li>
         </ul>
